@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Luxury modern mansion with infinity pool at dusk",
+      "imageUrl": "https://picsum.photos/seed/luxury-hero/1920/1080",
+      "imageHint": "luxury mansion"
+    },
+    {
+      "id": "prop-1",
+      "description": "Modern glass villa in the hills",
+      "imageUrl": "https://picsum.photos/seed/prop1/800/600",
+      "imageHint": "modern villa"
+    },
+    {
+      "id": "prop-2",
+      "description": "Beachfront contemporary estate",
+      "imageUrl": "https://picsum.photos/seed/prop2/800/600",
+      "imageHint": "beach estate"
+    },
+    {
+      "id": "prop-3",
+      "description": "Minimalist mountain retreat",
+      "imageUrl": "https://picsum.photos/seed/prop3/800/600",
+      "imageHint": "mountain house"
+    },
+    {
+      "id": "prop-4",
+      "description": "Urban penthouse with city views",
+      "imageUrl": "https://picsum.photos/seed/prop4/800/600",
+      "imageHint": "luxury penthouse"
+    },
+    {
+      "id": "prop-5",
+      "description": "Desert oasis architectural marvel",
+      "imageUrl": "https://picsum.photos/seed/prop5/800/600",
+      "imageHint": "desert architecture"
+    },
+    {
+      "id": "prop-6",
+      "description": "Traditional manor with modern interiors",
+      "imageUrl": "https://picsum.photos/seed/prop6/800/600",
+      "imageHint": "luxury manor"
+    }
+  ]
 }
