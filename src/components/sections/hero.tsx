@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -12,11 +11,11 @@ export function Hero() {
       />
       
       {/* Refined Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/90" />
-      <div className="absolute inset-0 bg-primary/10 backdrop-blur-[1px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/95" />
+      <div className="absolute inset-0 bg-primary/20 backdrop-blur-[1px]" />
 
-      {/* Content - with dynamic scaling and spacing */}
-      <div className="relative z-10 container mx-auto px-6 text-center pb-24 md:pb-32">
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-6 text-center pb-32 md:pb-48">
         <div className="animate-fade-in-up flex flex-col items-center">
           <p className="text-accent uppercase tracking-[0.6em] text-[10px] md:text-xs font-bold mb-8 drop-shadow-sm">
             Refined Living Redefined
@@ -40,8 +39,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Redesigned Animated Scroll Indicator */}
-      <div className="absolute bottom-10 md:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center z-20 pointer-events-none group">
+      {/* Repositioned Animated Scroll Indicator - Higher to avoid FilterBar overlap */}
+      <div className="absolute bottom-24 md:bottom-32 left-1/2 -translate-x-1/2 flex flex-col items-center z-20 pointer-events-none group">
         <span className="text-[9px] uppercase tracking-[0.5em] text-accent font-bold mb-3 opacity-60 group-hover:opacity-100 transition-opacity">
           Scroll
         </span>
