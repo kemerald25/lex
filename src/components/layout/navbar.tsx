@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -9,6 +8,9 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
 } from "@/components/ui/sheet";
 
 export function Navbar() {
@@ -57,6 +59,12 @@ export function Navbar() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="bg-background border-l border-white/10 w-[300px] p-0">
+                <SheetHeader className="sr-only">
+                  <SheetTitle>Navigation Menu</SheetTitle>
+                  <SheetDescription>
+                    Explore luxury properties and exclusive services.
+                  </SheetDescription>
+                </SheetHeader>
                 <div className="flex flex-col h-full py-12 px-6">
                   <Link href="/" className="flex items-center justify-center space-x-2 mb-12">
                     <span className="font-headline text-2xl font-bold tracking-tighter text-accent italic">
