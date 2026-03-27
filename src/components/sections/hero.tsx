@@ -20,19 +20,19 @@ export function Hero() {
           <p className="text-accent uppercase tracking-[0.6em] text-[10px] md:text-xs font-bold mb-8 drop-shadow-sm">
             Refined Living Redefined
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-headline mb-8 text-white max-w-[90vw] md:max-w-6xl mx-auto leading-[1.1] md:leading-[1.05] italic">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-headline mb-8 text-foreground max-w-[90vw] md:max-w-6xl mx-auto leading-[1.1] md:leading-[1.05] italic">
             Architectural Masterpieces <br /> 
             <span className="not-italic text-accent">Curated For You.</span>
           </h1>
-          <p className="text-white/80 text-sm md:text-lg lg:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-light drop-shadow-md">
-            LuxuryEstate Nexus is the global authority for high-end residential real estate, representing the world&apos;s most exceptional properties.
+          <p className="text-foreground/80 text-sm md:text-lg lg:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-light drop-shadow-md">
+            Domira is the global authority for high-end residential real estate, representing the world&apos;s most exceptional properties.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
             <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 rounded-none px-12 py-8 text-[11px] uppercase tracking-[0.3em] font-bold group h-auto shadow-2xl">
               Explore Portfolio
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto text-white border-white/30 hover:bg-white hover:text-black rounded-none px-12 py-8 text-[11px] uppercase tracking-[0.3em] font-bold h-auto backdrop-blur-md transition-all">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto text-foreground border-foreground/30 hover:bg-foreground hover:text-background rounded-none px-12 py-8 text-[11px] uppercase tracking-[0.3em] font-bold h-auto backdrop-blur-md transition-all">
               Private Concierge
             </Button>
           </div>

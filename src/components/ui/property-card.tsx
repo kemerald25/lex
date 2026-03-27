@@ -18,7 +18,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
   }).format(property.price);
 
   return (
-    <div className="group relative flex flex-col bg-card border border-white/5 overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:-translate-y-2">
+    <div className="group relative flex flex-col bg-card border border-border/50 overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:-translate-y-2">
       {/* Image Container */}
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
@@ -33,13 +33,13 @@ export function PropertyCard({ property }: PropertyCardProps) {
             Featured
           </div>
         )}
-        <button className="absolute top-4 right-4 p-2 bg-black/20 backdrop-blur-md rounded-full text-white hover:text-accent transition-colors">
+        <button className="absolute top-4 right-4 p-2 bg-black/20 backdrop-blur-md rounded-full text-foreground hover:text-accent transition-colors">
           <Heart className="h-4 w-4" />
         </button>
 
         {/* Quick View Button - Appears on Hover */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-none uppercase tracking-[0.3em] text-[10px] px-8">
+          <Button variant="outline" className="border-foreground text-foreground hover:bg-foreground hover:text-background rounded-none uppercase tracking-[0.3em] text-[10px] px-8">
             View Listing
           </Button>
         </div>
@@ -59,12 +59,12 @@ export function PropertyCard({ property }: PropertyCardProps) {
           <span className="opacity-60">{property.location}</span>
         </p>
 
-        <div className="mt-auto grid grid-cols-3 gap-4 pt-6 border-t border-white/5">
+        <div className="mt-auto grid grid-cols-3 gap-4 pt-6 border-t border-border/50">
           <div className="flex flex-col items-center gap-1">
             <Bed className="h-4 w-4 text-muted-foreground" />
             <span className="text-[10px] uppercase tracking-widest font-bold">{property.beds} Beds</span>
           </div>
-          <div className="flex flex-col items-center gap-1 border-x border-white/5">
+          <div className="flex flex-col items-center gap-1 border-x border-border/50">
             <Bath className="h-4 w-4 text-muted-foreground" />
             <span className="text-[10px] uppercase tracking-widest font-bold">{property.baths} Baths</span>
           </div>

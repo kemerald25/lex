@@ -29,14 +29,14 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
             <p className="text-accent uppercase tracking-[0.5em] text-[10px] font-bold mb-8 italic">Lifestyle Concierge</p>
-            <h2 className="text-4xl md:text-6xl font-headline italic text-white mb-10 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-headline italic text-foreground mb-10 leading-tight">
               Beyond Real Estate. <br />
               A Legacy of <span className="text-accent not-italic uppercase tracking-tight text-4xl md:text-5xl">Elegance</span>.
             </h2>
-            <p className="text-lg text-white/80 font-light mb-12 leading-relaxed">
+            <p className="text-lg text-foreground/80 font-light mb-12 leading-relaxed">
               We provide access to an exclusive world of elite living. From private aviation partnerships to off-market art acquisitions, our concierge ensures your transition is seamless.
             </p>
-            <button className="bg-white text-black px-12 py-5 uppercase tracking-[0.3em] text-[10px] font-bold hover:bg-accent transition-all">
+            <button className="bg-foreground text-background px-12 py-5 uppercase tracking-[0.3em] text-[10px] font-bold hover:bg-accent hover:text-accent-foreground transition-all">
               Request Membership
             </button>
           </div>

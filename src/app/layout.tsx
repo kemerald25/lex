@@ -3,8 +3,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'LuxuryEstate Nexus | High-End Properties',
-  description: 'Experience the pinnacle of luxury living with LuxuryEstate Nexus.',
+  title: 'Domira | High-End Properties',
+  description: 'Experience the pinnacle of luxury living with Domira.',
 };
 
 export default function RootLayout({

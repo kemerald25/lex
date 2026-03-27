@@ -18,7 +18,7 @@ export function FilterBar() {
 
   return (
     <div className="container mx-auto px-4 -mt-20 md:-mt-16 relative z-30">
-      <div className="bg-card border border-white/10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] p-8 md:p-10 rounded-none">
+      <div className="bg-card border border-border/50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] p-8 md:p-10 rounded-none">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
           {/* Search/Location */}
           <div className="space-y-4">
@@ -74,7 +74,7 @@ export function FilterBar() {
           </div>
         </div>
         
-        <div className="mt-8 flex justify-center border-t border-white/5 pt-6">
+        <div className="mt-8 flex justify-center border-t border-border/50 pt-6">
           <Button variant="link" className="text-muted-foreground text-[10px] uppercase tracking-[0.3em] hover:text-accent font-bold transition-colors">
             <SlidersHorizontal className="mr-2 h-3 w-3" />
             Advanced Search Options

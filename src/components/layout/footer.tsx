@@ -1,19 +1,17 @@
 
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-card border-t border-white/5 pt-20 pb-10">
+    <footer className="bg-card border-t border-border/50 pt-20 pb-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-8">
-              <span className="font-headline text-2xl font-bold tracking-tighter text-accent italic">
-                LEX
-              </span>
-              <span className="font-headline text-xl font-bold tracking-widest">
-                NEXUS
+              <span className="text-2xl font-headline font-bold uppercase tracking-[0.2em] text-foreground">
+                Domira<span className="text-accent">.</span>
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-xs">
@@ -37,18 +35,18 @@ export function Footer() {
 
           <div className="flex flex-col space-y-4">
             <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-accent mb-4">Navigations</h4>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Properties</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Off-Market Access</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Luxury Lifestyle</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Global Network</Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Properties</Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Off-Market Access</Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Luxury Lifestyle</Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Global Network</Link>
           </div>
 
           <div className="flex flex-col space-y-4">
             <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-accent mb-4">The Nexus</h4>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Our Story</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Partnerships</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Careers</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Press</Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Our Story</Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Partnerships</Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Careers</Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Press</Link>
           </div>
 
           <div className="flex flex-col space-y-4">
@@ -58,18 +56,18 @@ export function Footer() {
               1200 Avenue of the Americas <br />
               New York, NY 10036
             </p>
-            <p className="text-sm text-muted-foreground">+1 (800) LUX-NEXUS</p>
+            <p className="text-sm text-muted-foreground">+1 (800) DOMIRA   </p>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-border/50 gap-4">
           <p className="text-xs text-muted-foreground opacity-50 uppercase tracking-widest">
-            © 2024 LuxuryEstate Nexus. All Rights Reserved.
+            © 2024 Domira. All Rights Reserved.
           </p>
           <div className="flex space-x-8 text-xs text-muted-foreground opacity-50 uppercase tracking-widest">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
-            <Link href="#" className="hover:text-white transition-colors">Accessibility</Link>
+            <Link href="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-foreground transition-colors">Terms of Service</Link>
+            <Link href="#" className="hover:text-foreground transition-colors">Accessibility</Link>
           </div>
         </div>
       </div>
