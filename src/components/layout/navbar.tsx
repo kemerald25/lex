@@ -1,5 +1,7 @@
+
 "use client";
 
+import * as React from "react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -14,6 +16,12 @@ import {
 } from "@/components/ui/sheet";
 
 export function Navbar() {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const navLinks = [
     { href: "#listings", label: "Properties" },
     { href: "#listings", label: "Off-Market" },
@@ -49,53 +57,60 @@ export function Navbar() {
             Inquire
           </Button>
 
-          {/* Mobile Navigation Trigger */}
-          <div className="md:hidden">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-foreground hover:bg-accent/10">
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="bg-background border-l border-white/10 w-[300px] p-0">
-                <SheetHeader className="sr-only">
-                  <SheetTitle>Navigation Menu</SheetTitle>
-                  <SheetDescription>
-                    Explore luxury properties and exclusive services.
-                  </SheetDescription>
-                </SheetHeader>
-                <div className="flex flex-col h-full py-12 px-6">
-                  <Link href="/" className="flex items-center justify-center space-x-2 mb-12">
-                    <span className="font-headline text-2xl font-bold tracking-tighter text-accent italic">
-                      LEX
-                    </span>
-                    <span className="font-headline text-xl font-bold tracking-widest">
-                      NEXUS
-                    </span>
-                  </Link>
-                  
-                  <nav className="flex flex-col space-y-6 text-center">
-                    {navLinks.map((link) => (
-                      <Link 
-                        key={link.label} 
-                        href={link.href} 
-                        className="text-sm font-medium uppercase tracking-[0.3em] hover:text-accent transition-colors py-2 border-b border-white/5"
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </nav>
+          {/* Mobile Navigation Trigger - Deferred until mount to avoid hydration mismatch */}
+          {mounted && (
+            <div className="md:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="text-foreground hover:bg-accent/10">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Toggle menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="bg-background border-l border-white/10 w-[300px] p-0">
+                  <SheetHeader className="sr-only">
+                    <SheetTitle>Navigation Menu</SheetTitle>
+                    <SheetDescription>
+                      Explore luxury properties and exclusive services.
+                    </SheetDescription>
+                  </SheetHeader>
+                  <div className="flex flex-col h-full py-12 px-6">
+                    <Link href="/" className="flex items-center justify-center space-x-2 mb-12">
+                      <span className="font-headline text-2xl font-bold tracking-tighter text-accent italic">
+                        LEX
+                      </span>
+                      <span className="font-headline text-xl font-bold tracking-widest">
+                        NEXUS
+                      </span>
+                    </Link>
+                    
+                    <nav className="flex flex-col space-y-6 text-center">
+                      {navLinks.map((link) => (
+                        <Link 
+                          key={link.label} 
+                          href={link.href} 
+                          className="text-sm font-medium uppercase tracking-[0.3em] hover:text-accent transition-colors py-2 border-b border-white/5"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </nav>
 
-                  <div className="mt-auto pt-8">
-                    <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-none uppercase tracking-[0.2em] text-[10px] font-bold h-12">
-                      Inquire Now
-                    </Button>
+                    <div className="mt-auto pt-8">
+                      <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-none uppercase tracking-[0.2em] text-[10px] font-bold h-12">
+                        Inquire Now
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
+                </SheetContent>
+              </Sheet>
+            </div>
+          )}
+          
+          {/* Fallback for server-render/pre-mount to maintain layout stability */}
+          {!mounted && (
+            <div className="md:hidden w-10 h-10" />
+          )}
         </div>
       </div>
     </header>

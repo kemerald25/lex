@@ -7,8 +7,10 @@ import { Button } from "@/components/ui/button";
 
 export function ThemeToggle() {
   const [theme, setTheme] = React.useState<"light" | "dark">("dark");
+  const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
+    setMounted(true);
     const root = window.document.documentElement;
     if (theme === "dark") {
       root.classList.add("dark");
@@ -20,6 +22,11 @@ export function ThemeToggle() {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
+  // Prevent hydration mismatch by not rendering the interactive button until mounted
+  if (!mounted) {
+    return <div className="h-10 w-10" aria-hidden="true" />;
+  }
 
   return (
     <Button
